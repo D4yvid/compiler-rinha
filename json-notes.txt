@@ -1,0 +1,34 @@
+{} - Object
+[] - Array
+"String" - String
+1.23 / 32 - Number
+true / false - Boolean
+null - NULL
+?? - Value
+
+A value can be anything, an object, an array, a numbers, a boolean and a string
+
+Value {
+    ValueType type
+    Value::* data
+}
+
+an Object can have keys and values, we can call these Pairs
+
+Value::Object {
+    i32 pairCount
+    Value::Object::Pair[pairCount] pairs
+}
+
+Object::Pair {
+    string key
+    Value value // Values can be string, number and objects
+}
+
+an Array is a list of Values, what values can be? anything,
+objects, strings, numbers and Arrays
+
+Value::Array {
+    i32 itemCount
+    Value::*[itemCount] items
+}
